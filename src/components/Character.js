@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { useCharacter } from '../context/useCharacterContext';
+import { clearCharacter, useCharacter } from '../context/useCharacterContext';
 
 const StyledCharacter = styled.div`
   padding: 60px 40px;
@@ -22,7 +22,7 @@ const StyledRow = styled.div`
 `;
 
 export default function Character() {
-  const [character, setCharacter] = useCharacter();
+  const [character, dispatch] = useCharacter();
   return (
     <StyledCharacter>
       {character &&
@@ -32,25 +32,7 @@ export default function Character() {
             <div>{value}</div>
           </StyledRow>
         ))}
-      <button
-        onClick={() =>
-          setCharacter({
-            name: '',
-            player: '',
-            background: '',
-            race: '',
-            alignment: '',
-            str: '',
-            dex: '',
-            con: '',
-            int: '',
-            wis: '',
-            cha: '',
-          })
-        }
-      >
-        Clear Sheet
-      </button>
+      <button onClick={() => clearCharacter(dispatch)}>Clear Sheet</button>
     </StyledCharacter>
   );
 }

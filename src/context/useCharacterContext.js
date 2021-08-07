@@ -1,25 +1,40 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 
 const CharacterContext = createContext();
 
-export const CharacterProvider = (props) => {
-  const [character, setCharacter] = useState({
-    name: '',
-    player: '',
-    background: '',
-    race: '',
-    alignment: '',
-    str: '',
-    dex: '',
-    con: '',
-    int: '',
-    wis: '',
-    cha: '',
-  });
+const initialCharacter = {
+  name: '',
+  player: '',
+  background: '',
+  race: '',
+  alignment: '',
+  str: '',
+  dex: '',
+  con: '',
+  int: '',
+  wis: '',
+  cha: '',
+};
 
-  return (
-    <CharacterContext.Provider value={[character, setCharacter]} {...props} />
-  );
+const characterReducer = (state, action) => {
+  switch (action.type) {
+    case 'update character': {
+      return {
+        ...action.character,
+      };
+    }
+    case 'clear character': {
+      return initialCharacter;
+    }
+    default:
+      throw new Error(`Invalid action ${action.type}`);
+  }
+};
+
+export const CharacterProvider = (props) => {
+  const [character, dispatch] = useReducer(characterReducer, initialCharacter);
+
+  return <CharacterContext.Provider value={[character, dispatch]} {...props} />;
 };
 
 export const useCharacter = () => {
@@ -30,4 +45,12 @@ export const useCharacter = () => {
   }
 
   return context;
+};
+
+export const updateCharacter = (dispatch, updatedCharacter) => {
+  dispatch({ type: 'update character', character: updatedCharacter });
+};
+
+export const clearCharacter = (dispatch) => {
+  dispatch({ type: 'clear character' });
 };
