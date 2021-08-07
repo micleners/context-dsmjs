@@ -8,7 +8,6 @@ export default function AbilityInput({ values, handleChange, name }) {
         type="number"
         name={name}
         min="0"
-        required
         max="100"
         value={values[name]}
         onChange={handleChange}

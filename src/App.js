@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import styled from 'styled-components';
 
 import GlobalStyle from './GlobalStyles';
@@ -8,6 +8,8 @@ import CharacterForm from './components/CharacterForm';
 const StyledRow = styled.div`
   display: flex;
 `;
+
+export const CharacterContext = createContext();
 
 function App() {
   const [character, setCharacter] = useState({
@@ -23,14 +25,15 @@ function App() {
     wis: '',
     cha: '',
   });
+
   return (
-    <div>
+    <CharacterContext.Provider value={[character, setCharacter]}>
       <GlobalStyle />
       <StyledRow>
-        <CharacterForm character={character} setCharacter={setCharacter} />
-        <Character character={character} setCharacter={setCharacter} />
+        <CharacterForm />
+        <Character />
       </StyledRow>
-    </div>
+    </CharacterContext.Provider>
   );
 }
 

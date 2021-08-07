@@ -7,7 +7,6 @@ export default function AttributeInputs({ values, handleChange }) {
       <input
         type="text"
         name="name"
-        required
         value={values.name}
         onChange={handleChange}
       />
@@ -16,7 +15,6 @@ export default function AttributeInputs({ values, handleChange }) {
       <input
         type="text"
         name="player"
-        required
         value={values.player}
         onChange={handleChange}
       />
@@ -25,7 +23,6 @@ export default function AttributeInputs({ values, handleChange }) {
       <textarea
         type="text"
         name="background"
-        required
         value={values.background}
         onChange={handleChange}
       />
@@ -34,7 +31,6 @@ export default function AttributeInputs({ values, handleChange }) {
       <textarea
         type="text"
         name="race"
-        required
         value={values.race}
         onChange={handleChange}
       />
@@ -43,7 +39,6 @@ export default function AttributeInputs({ values, handleChange }) {
       <textarea
         type="text"
         name="alignment"
-        required
         value={values.alignment}
         onChange={handleChange}
       />
