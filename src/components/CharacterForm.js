@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { CharacterContext } from '../App';
+import React from 'react';
 import { Formik } from 'formik';
 import styled from 'styled-components';
 
+import { useCharacter } from '../context/useCharacterContext';
 import AbilityInputs from './AbilityInputs';
 import AttributeInputs from './AttributeInputs';
 
@@ -16,7 +16,7 @@ const StyledForm = styled.form`
 `;
 
 const CharacterForm = () => {
-  const [character, setCharacter] = useContext(CharacterContext);
+  const [character, setCharacter] = useCharacter();
 
   return (
     <div>

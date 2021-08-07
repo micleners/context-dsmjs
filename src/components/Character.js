@@ -1,6 +1,6 @@
-import { useContext } from 'react';
-import { CharacterContext } from '../App';
 import styled from 'styled-components';
+
+import { useCharacter } from '../context/useCharacterContext';
 
 const StyledCharacter = styled.div`
   padding: 60px 40px;
@@ -22,7 +22,7 @@ const StyledRow = styled.div`
 `;
 
 export default function Character() {
-  const [character, setCharacter] = useContext(CharacterContext);
+  const [character, setCharacter] = useCharacter();
   return (
     <StyledCharacter>
       {character &&
