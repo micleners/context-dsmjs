@@ -1,6 +1,8 @@
+import { useFormikContext } from 'formik';
 import React from 'react';
 
-export default function AbilityInput({ values, handleChange, name }) {
+export default function AbilityInput({ name }) {
+  const { values, handleChange } = useFormikContext();
   return (
     <>
       <h3>{name}</h3>
@@ -8,7 +10,6 @@ export default function AbilityInput({ values, handleChange, name }) {
         type="number"
         name={name}
         min="0"
-        // required
         max="100"
         value={values[name]}
         onChange={handleChange}
