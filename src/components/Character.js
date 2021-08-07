@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { CharacterContext } from '../App';
 import styled from 'styled-components';
 
 const StyledCharacter = styled.div`
@@ -19,7 +21,8 @@ const StyledRow = styled.div`
   }
 `;
 
-export default function Character({ character, setCharacter }) {
+export default function Character() {
+  const [character, setCharacter] = useContext(CharacterContext);
   return (
     <StyledCharacter>
       {character &&
