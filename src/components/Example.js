@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function App() {
+function CharacterExample() {
   const [character, setCharacter] = useState('');
   return (
     <div>
@@ -32,4 +32,4 @@ const Character = ({ character, setCharacter }) => {
   );
 };
 
-export default App;
+export default CharacterExample;
