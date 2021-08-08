@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
+import { CLEAR_CHARACTER } from '../redux/actionTypes';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCharacter, useCharacter } from '../context/useCharacterContext';
 
 const StyledCharacter = styled.div`
   padding: 60px 40px;
@@ -24,7 +24,7 @@ const StyledRow = styled.div`
 
 export default function Character() {
   const character = useSelector((state) => state);
-  const [_, dispatch] = useCharacter();
+  const dispatch = useDispatch();
   return (
     <StyledCharacter>
       {character &&
@@ -34,7 +34,9 @@ export default function Character() {
             <div>{value}</div>
           </StyledRow>
         ))}
-      <button onClick={() => clearCharacter(dispatch)}>Clear Sheet</button>
+      <button onClick={() => dispatch({ type: CLEAR_CHARACTER })}>
+        Clear Sheet
+      </button>
     </StyledCharacter>
   );
 }
