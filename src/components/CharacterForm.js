@@ -1,10 +1,11 @@
 import React from 'react';
 import { Formik } from 'formik';
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { updateCharacter, useCharacter } from '../context/useCharacterContext';
 import AbilityInputs from './AbilityInputs';
 import AttributeInputs from './AttributeInputs';
+import { UPDATE_CHARACTER } from '../redux/actionTypes';
 
 const StyledForm = styled.form`
   display: flex;
@@ -16,7 +17,8 @@ const StyledForm = styled.form`
 `;
 
 const CharacterForm = () => {
-  const [character, dispatch] = useCharacter();
+  const character = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -24,7 +26,7 @@ const CharacterForm = () => {
         enableReinitialize={true}
         initialValues={character}
         onSubmit={(values) => {
-          updateCharacter(dispatch, values);
+          dispatch({ type: UPDATE_CHARACTER, character: values });
         }}
       >
         {({ values, handleChange, handleSubmit }) => (

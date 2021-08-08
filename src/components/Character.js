@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { useSelector, useDispatch } from 'react-redux';
 import { clearCharacter, useCharacter } from '../context/useCharacterContext';
 
 const StyledCharacter = styled.div`
@@ -22,7 +23,8 @@ const StyledRow = styled.div`
 `;
 
 export default function Character() {
-  const [character, dispatch] = useCharacter();
+  const character = useSelector((state) => state);
+  const [_, dispatch] = useCharacter();
   return (
     <StyledCharacter>
       {character &&
