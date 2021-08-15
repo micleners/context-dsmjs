@@ -17,7 +17,7 @@ const StyledForm = styled.form`
 `;
 
 const CharacterForm = () => {
-  const character = useSelector((state) => state);
+  const character = useSelector((state) => state.character);
   const dispatch = useDispatch();
 
   return (
@@ -25,9 +25,9 @@ const CharacterForm = () => {
       <Formik
         enableReinitialize={true}
         initialValues={character}
-        onSubmit={(values) => {
-          dispatch({ type: UPDATE_CHARACTER, character: values });
-        }}
+        onSubmit={(values) =>
+          dispatch({ type: UPDATE_CHARACTER, character: values })
+        }
       >
         {({ values, handleChange, handleSubmit }) => (
           <StyledForm onSubmit={handleSubmit}>

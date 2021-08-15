@@ -16,8 +16,8 @@ function App() {
       <GlobalStyle />
       <StyledRow>
         <div>"Apples"</div>
-        {/* <CharacterForm />
-        <Character /> */}
+        <CharacterForm />
+        <Character />
       </StyledRow>
     </Provider>
   );

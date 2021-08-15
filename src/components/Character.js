@@ -23,8 +23,9 @@ const StyledRow = styled.div`
 `;
 
 export default function Character() {
-  const character = useSelector((state) => state);
+  const character = useSelector((state) => state.character);
   const dispatch = useDispatch();
+
   return (
     <StyledCharacter>
       {character &&
