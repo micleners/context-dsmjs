@@ -1,11 +1,12 @@
 import React from 'react';
 import { Formik } from 'formik';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 import AbilityInputs from './AbilityInputs';
 import AttributeInputs from './AttributeInputs';
-import { UPDATE_CHARACTER } from '../redux/actionTypes';
+import { updateCharacter } from '../redux/actions';
 
 const StyledForm = styled.form`
   display: flex;
@@ -16,18 +17,13 @@ const StyledForm = styled.form`
   }
 `;
 
-const CharacterForm = () => {
-  const character = useSelector((state) => state.character);
-  const dispatch = useDispatch();
-
+const CharacterForm = ({ character, updateCharacter }) => {
   return (
     <div>
       <Formik
         enableReinitialize={true}
         initialValues={character}
-        onSubmit={(values) =>
-          dispatch({ type: UPDATE_CHARACTER, character: values })
-        }
+        onSubmit={(values) => updateCharacter(values)}
       >
         {({ values, handleChange, handleSubmit }) => (
           <StyledForm onSubmit={handleSubmit}>
@@ -41,4 +37,12 @@ const CharacterForm = () => {
   );
 };
 
-export default CharacterForm;
+const mapStateToProps = (state) => {
+  return { character: state.character };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ updateCharacter }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CharacterForm);

@@ -19,7 +19,7 @@ const characterReducer = (state = initialCharacter, action) => {
     case UPDATE_CHARACTER: {
       return {
         ...state,
-        ...action.character,
+        ...action.payload,
       };
     }
     case CLEAR_CHARACTER: {

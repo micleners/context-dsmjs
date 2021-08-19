@@ -15,7 +15,6 @@ function App() {
     <Provider store={store}>
       <GlobalStyle />
       <StyledRow>
-        <div>"Apples"</div>
         <CharacterForm />
         <Character />
       </StyledRow>
