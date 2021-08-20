@@ -1,8 +1,8 @@
-Character Builder - Demo App
+# Character Builder - Demo App
 
 This is a demo app used for a talk given on Aug 9, 2012. Figma's associated with the talk are located at: https://www.figma.com/file/2lRXqkbdmFNrll4WyZwUId/Context-dsmJS?node-id=0%3A1
 
-This App contains examples of:
+### This App contains examples of:
 
   - useState
   - useContext
@@ -10,7 +10,7 @@ This App contains examples of:
   - React Redux
   - React Toolkit
 
-Resources:
+## Resources:
 
   - useContext + useReducer: https://kentcdodds.com/blog/how-to-use-react-context-effectively
   - useReducer + Toolkit: https://www.valentinog.com/blog/use-reducer/
@@ -20,17 +20,31 @@ Resources:
   - JS Party – Episode #146: Redux is definitely NOT dead with Mark Erikson: https://changelog.com/jsparty/146
   - Epic React by Kent C. Dodds: https://epicreact.dev/
 
-Branches
+## Branches
+Clone this repository:
+```
+git clone https://github.com/micleners/context-dsmjs.git
+```
 
-0-character-example Contains a simple prop drilling app.
-1-prop-drilling Adding more prop drilling. Also contains Formik.
-2-context-for-me Replaces prop drilling outside of formik with useContext.
-3-context-for-formik Replaces prop drilling within formik using useFormikContext.
-5-useCharacter Replaces direct use of context with custom hook useCharacter.
-7-useReducer Shows how to use context with useReducer similar to React Redux
-8-redux-hooks Uses React Redux and hooks to do state management
-⚠️WIP 6-redux
-⚠️WIP 9-redux-toolkit
+Checkout a [branch](https://github.com/micleners/context-dsmjs/branches/yours) to code along during the talk. To use the git CLI:
+```
+git checkout branch-name
+```
+
+If you need to hurry on to the next section you can come back to your changes later with:
+```
+git stash
+```
+
+  - ✅  `0-character-example`: Contains a simple prop drilling app.
+  - ✅  `1-prop-drilling`: Adding more components, more prop drilling, and Formik.
+  - ✅  `2-context-for-me`: Replaces prop drilling outside of formik with useContext.
+  - ✅  `3-context-for-formik`: Replaces prop drilling within formik using useFormikContext.
+  - ✅  `4-useCharacter`: Replaces direct use of context with custom hook useCharacter.
+  - ✅  `5-redux-connect`: Uses redux for state management OG style.
+  - ✅  `6-redux-hooks`: Replaces `connect` with `useSelector` and `useDispatch` hooks.
+  - ✅  `7-redux-toolkit`: Replaces `redux` with `@redux/toolkit` and creates slice.
+  - ✅  `8-useReducer`: Replaces `useState` from branch `4-useCharacter` with `useReducer`.
 
 ### `yarn start`
 
