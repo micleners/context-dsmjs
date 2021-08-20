@@ -1,13 +1,9 @@
-import styled from 'styled-components';
-
 import GlobalStyle from './GlobalStyles';
 import Character from './components/Character';
 import CharacterForm from './components/CharacterForm';
 import { CharacterProvider } from './context/useCharacterContext';
 
-const StyledRow = styled.div`
-  display: flex;
-`;
+import { StyledRow } from './components/styled';
 
 function App() {
   return (
