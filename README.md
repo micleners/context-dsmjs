@@ -1,10 +1,36 @@
-# Getting Started with Create React App
+Character Builder - Demo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a demo app used for a talk given on Aug 9, 2012. Figma's associated with the talk are located at: https://www.figma.com/file/2lRXqkbdmFNrll4WyZwUId/Context-dsmJS?node-id=0%3A1
 
-## Available Scripts
+This App contains examples of:
 
-In the project directory, you can run:
+  - useState
+  - useContext
+  - Formik
+  - React Redux
+  - React Toolkit
+
+Resources:
+
+  - useContext + useReducer: https://kentcdodds.com/blog/how-to-use-react-context-effectively
+  - useReducer + Toolkit: https://www.valentinog.com/blog/use-reducer/
+  - Redux → Toolkit: https://blog.bitsrc.io/simplifying-redux-with-redux-toolkit-6236c28cdfcb
+  - Redux → Toolkit: https://redux.js.org/tutorials/fundamentals/part-8-modern-redux
+  - JS Party – Episode #186: Getting hooked on React with Kent C. Dodds: https://changelog.com/jsparty/186
+  - JS Party – Episode #146: Redux is definitely NOT dead with Mark Erikson: https://changelog.com/jsparty/146
+  - Epic React by Kent C. Dodds: https://epicreact.dev/
+
+Branches
+
+0-character-example Contains a simple prop drilling app.
+1-prop-drilling Adding more prop drilling. Also contains Formik.
+2-context-for-me Replaces prop drilling outside of formik with useContext.
+3-context-for-formik Replaces prop drilling within formik using useFormikContext.
+5-useCharacter Replaces direct use of context with custom hook useCharacter.
+7-useReducer Shows how to use context with useReducer similar to React Redux
+8-redux-hooks Uses React Redux and hooks to do state management
+⚠️WIP 6-redux
+⚠️WIP 9-redux-toolkit
 
 ### `yarn start`
 
