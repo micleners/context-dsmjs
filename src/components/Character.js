@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { clearCharacter } from '../redux/actions';
+import { useSelector, useDispatch } from 'react-redux';
 
 const StyledCharacter = styled.div`
   padding: 60px 40px;
@@ -23,7 +22,9 @@ const StyledRow = styled.div`
   }
 `;
 
-function Character({ character, clearCharacter }) {
+export default function Character() {
+  const character = useSelector((state) => state.character);
+  const dispatch = useDispatch();
   return (
     <StyledCharacter>
       {character &&
@@ -33,17 +34,7 @@ function Character({ character, clearCharacter }) {
             <div>{value}</div>
           </StyledRow>
         ))}
-      <button onClick={() => clearCharacter()}>Clear Sheet</button>
+      <button onClick={() => dispatch(clearCharacter())}>Clear Sheet</button>
     </StyledCharacter>
   );
 }
-
-const mapStateToProps = (state, ownProps) => {
-  return { character: state.character };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ clearCharacter }, dispatch);
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Character);
