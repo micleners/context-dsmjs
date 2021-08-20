@@ -4,11 +4,15 @@ This is a demo app used for a talk given on Aug 9, 2012. Figma's associated with
 
 ### This App contains examples of:
 
-  - useState
-  - useContext
+  - Hooks:
+    - useState
+    - useContext
+    - useReducer
   - Formik
-  - React Redux
-  - React Toolkit
+  - Styled Components
+  - Redux
+    - React Redux
+    - React Toolkit
 
 ## Resources:
 
