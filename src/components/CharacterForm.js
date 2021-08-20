@@ -1,18 +1,9 @@
 import React from 'react';
 import { Formik } from 'formik';
-import styled from 'styled-components';
 
 import AbilityInputs from './AbilityInputs';
 import AttributeInputs from './AttributeInputs';
-
-const StyledForm = styled.form`
-  display: flex;
-  align-items: center;
-
-  .input-group {
-    padding: 20px;
-  }
-`;
+import { StyledForm } from './styled';
 
 const CharacterForm = ({ character, setCharacter }) => (
   <div>

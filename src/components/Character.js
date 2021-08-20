@@ -1,33 +1,14 @@
-import styled from 'styled-components';
-
-const StyledCharacter = styled.div`
-  padding: 60px 40px;
-`;
-
-const StyledRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid;
-
-  &:last-child {
-    border-bottom: 1px solid;
-  }
-
-  div {
-    margin: 10px 30px;
-    text-align: right;
-  }
-`;
+import { StyledCharacter, StyledCharacterRow } from './styled';
 
 export default function Character({ character, setCharacter }) {
   return (
     <StyledCharacter>
       {character &&
         Object.entries(character).map(([key, value]) => (
-          <StyledRow key={key}>
+          <StyledCharacterRow key={key}>
             <div>{key}</div>
             <div>{value}</div>
-          </StyledRow>
+          </StyledCharacterRow>
         ))}
       <button
         onClick={() =>
