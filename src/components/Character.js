@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { clearCharacter } from '../redux/actions';
+import { clearCharacter } from '../redux/characterReducer';
 import { useSelector, useDispatch } from 'react-redux';
 
 const StyledCharacter = styled.div`

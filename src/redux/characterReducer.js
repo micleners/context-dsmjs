@@ -1,4 +1,4 @@
-import { UPDATE_CHARACTER, CLEAR_CHARACTER } from './actionTypes';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialCharacter = {
   name: '',
@@ -14,20 +14,40 @@ const initialCharacter = {
   cha: '',
 };
 
-const characterReducer = (state = initialCharacter, action) => {
-  switch (action.type) {
-    case UPDATE_CHARACTER: {
+const characterSlice = createSlice({
+  name: 'character',
+  initialState: initialCharacter,
+  reducers: {
+    updateCharacter(state, action) {
       return {
         ...state,
         ...action.payload,
       };
-    }
-    case CLEAR_CHARACTER: {
+    },
+    clearCharacter(state) {
       return initialCharacter;
-    }
-    default:
-      return state;
-  }
-};
+    },
+  },
+});
 
-export default characterReducer;
+export const { updateCharacter, clearCharacter } = characterSlice.actions;
+
+export default characterSlice.reducer;
+
+// const characterReducer = (state = initialCharacter, action) => {
+//   switch (action.type) {
+//     case UPDATE_CHARACTER: {
+//       return {
+//         ...state,
+//         ...action.payload,
+//       };
+//     }
+//     case CLEAR_CHARACTER: {
+//       return initialCharacter;
+//     }
+//     default:
+//       return state;
+//   }
+// };
+
+// export default characterReducer;

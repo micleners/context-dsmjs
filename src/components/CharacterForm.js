@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import AbilityInputs from './AbilityInputs';
 import AttributeInputs from './AttributeInputs';
-import { updateCharacter } from '../redux/actions';
+import { updateCharacter } from '../redux/characterReducer';
 
 const StyledForm = styled.form`
   display: flex;
