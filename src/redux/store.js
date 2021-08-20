@@ -1,4 +1,8 @@
-import { createStore } from 'redux';
-import rootReducer from './reducer';
+import { configureStore } from '@reduxjs/toolkit';
+import characterReducer from './characterReducer';
 
-export default createStore(rootReducer);
+export default configureStore({
+  reducer: {
+    character: characterReducer,
+  },
+});
