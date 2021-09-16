@@ -1,6 +1,6 @@
 # Character Builder - Demo App
 
-This is a demo app used for a talk given on Aug 9, 2012. Figma's associated with the talk are located at: https://www.figma.com/file/2lRXqkbdmFNrll4WyZwUId/Context-dsmJS?node-id=0%3A1
+This is a demo app used for a talk given on Aug 9, 2021. Figma's associated with the talk are located at: https://www.figma.com/file/2lRXqkbdmFNrll4WyZwUId/Context-dsmJS?node-id=0%3A1
 
 ### This App contains examples of:
 
