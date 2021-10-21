@@ -16,10 +16,12 @@ This is a demo app used for a talk given on Aug 9, 2012. Figma's associated with
 
 ## Resources:
 
+  - Avoid re-renders with useContext: https://blog.axlight.com/posts/4-options-to-prevent-extra-rerenders-with-react-context/
   - useContext + useReducer: https://kentcdodds.com/blog/how-to-use-react-context-effectively
   - useReducer + Toolkit: https://www.valentinog.com/blog/use-reducer/
   - Redux → Toolkit: https://blog.bitsrc.io/simplifying-redux-with-redux-toolkit-6236c28cdfcb
   - Redux → Toolkit: https://redux.js.org/tutorials/fundamentals/part-8-modern-redux
+  - Performance with Hooks vs Connect: https://stackoverflow.com/a/58029394
   - JS Party – Episode #186: Getting hooked on React with Kent C. Dodds: https://changelog.com/jsparty/186
   - JS Party – Episode #146: Redux is definitely NOT dead with Mark Erikson: https://changelog.com/jsparty/146
   - Epic React by Kent C. Dodds: https://epicreact.dev/
