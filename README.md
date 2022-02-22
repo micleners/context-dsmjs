@@ -42,7 +42,7 @@ If you need to hurry on to the next section you can come back to your changes la
 git stash
 ```
 
-  - ✅  `0-character-example`: Starting point for simple single file app with prop drilling.
+  - ✅  [`0-character-example`](https://github.com/micleners/context-dsmjs/tree/0-character-example): Starting point for simple single file app with prop drilling.
   - ✅  `0-character-example-after`: After converting prop drilling to context.
   - ✅  `1-prop-drilling`: Starting point with bigger app with more components, more prop drilling, and Formik.
   - ✅  `2-context-for-me`: After replacing prop drilling outside of formik with useContext.
