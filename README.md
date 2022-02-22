@@ -42,15 +42,16 @@ If you need to hurry on to the next section you can come back to your changes la
 git stash
 ```
 
-  - ✅  `0-character-example`: Contains a simple prop drilling app.
-  - ✅  `1-prop-drilling`: Adding more components, more prop drilling, and Formik.
-  - ✅  `2-context-for-me`: Replaces prop drilling outside of formik with useContext.
-  - ✅  `3-context-for-formik`: Replaces prop drilling within formik using useFormikContext.
-  - ✅  `4-useCharacter`: Replaces direct use of context with custom hook useCharacter.
-  - ✅  `5-redux-connect`: Uses redux for state management OG style.
-  - ✅  `6-redux-hooks`: Replaces `connect` with `useSelector` and `useDispatch` hooks.
-  - ✅  `7-redux-toolkit`: Replaces `redux` with `@redux/toolkit` and creates slice.
-  - ✅  `8-useReducer`: Replaces `useState` from branch `4-useCharacter` with `useReducer`.
+  - ✅  `0-character-example`: Starting point for simple single file app with prop drilling.
+  - ✅  `0-character-example-after`: After converting prop drilling to context.
+  - ✅  `1-prop-drilling`: Starting point with bigger app with more components, more prop drilling, and Formik.
+  - ✅  `2-context-for-me`: After replacing prop drilling outside of formik with useContext.
+  - ✅  `3-context-for-formik`: After replacing prop drilling within formik using useFormikContext.
+  - ✅  `4-useCharacter`: After replacing direct use of context with custom hook useCharacter.
+  - ✅  `5-redux-connect`: Starting point for app using redux for state management - OG style.
+  - ✅  `6-redux-hooks`: After replacing `connect` with `useSelector` and `useDispatch` hooks.
+  - ✅  `7-redux-toolkit`: After replacing `redux` with `@redux/toolkit` and creates slice.
+  - ✅  `8-useReducer`: After replacing `useState` from branch `4-useCharacter` with `useReducer`.
 
 ### `yarn start`
 
